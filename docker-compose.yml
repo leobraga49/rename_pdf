@@ -1,0 +1,9 @@
+version: '3'
+services:
+  change_pdf_name:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./output:/app/output
+    command: sh -c "java -jar change_pdf_name.jar && zip -rj /app/output/output.zip /app/files/new/*"
