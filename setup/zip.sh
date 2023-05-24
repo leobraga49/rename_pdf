@@ -1,3 +1,4 @@
-zip -r newFiles.zip /app/files/new
+#!/bin/sh
 
-mv newFile.zip /
+zip -r /app/files/newFiles.zip /app/files/new
+mv /app/files/newFiles.zip /app/output/output.zip

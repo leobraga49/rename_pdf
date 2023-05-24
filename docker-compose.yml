@@ -6,4 +6,4 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./output:/app/output
-    command: sh -c "java -jar change_pdf_name.jar && zip -rj /app/output/output.zip /app/files/new/*"
+    command: sh -c "java -jar change_pdf_name.jar && cd /app/files && zip -r /app/output/output.zip new/*"
